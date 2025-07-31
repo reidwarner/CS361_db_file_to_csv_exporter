@@ -22,6 +22,8 @@ with open("sqlite_database.db", "rb") as f:
     db_bytes = f.read()
 socket.send(db_bytes)`
 
+<pre lang="python"><code>```python def hello(): print("Hello, world!") ```</code></pre>
+
 
 ## How to programmatically RECEIVE data from the microservice
 The microservice will process the data and sends back a string that communicates if the CSV file creation was successful or not.
