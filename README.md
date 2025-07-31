@@ -31,6 +31,18 @@ with open("sqlite_database.db", "rb") as f:
 socket.send(db_bytes)
 </code></pre>
 
+The example call above assumes that a SQLite database file exists in the current directory of the calling program. An example of the `sqlite_database.db` is the SQLite database file created by inserting data into the table created by the following SQL query
+
+<pre lang="sql"><code>
+'''CREATE TABLE expenses (
+        id INTEGER PRIMARY KEY AUTOINCREMENT,
+        expense_id INTEGER NOT NULL,
+        amount REAL NOT NULL,
+        date TEXT NOT NULL,
+        category TEXT NOT NULL
+        )'''
+</code></pre>
+
 
 ## How to programmatically RECEIVE data from the microservice
 The microservice will process the data and sends back a string that communicates if the CSV file creation was successful or not.
