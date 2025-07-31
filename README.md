@@ -63,4 +63,8 @@ reply = socket.recv_string()
 print(reply)
 </code></pre>
 
+If successful, the output of the above print statement will be:
+
+<pre><code>### Example Output ``` Export Successful. {file_name} available in Downloads folder. ``` </code></pre>
+
 ## UML sequence diagram 
