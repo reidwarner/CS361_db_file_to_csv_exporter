@@ -55,4 +55,12 @@ To receive data from the microservice, use the following steps:
   3. `Export Failure. Could not located Downloads folder.`
 3. If the returned message string states the export was successful, then the generated csv file will be in the local Downloads directory.
 
+An example of a way to receive data from the microservice in Python, is to add the following lines to the request example above:
+
+<pre lang="python"><code>
+# Wait for reply from microservice
+reply = socket.recv_string()
+print(reply)
+</code></pre>
+
 ## UML sequence diagram 
