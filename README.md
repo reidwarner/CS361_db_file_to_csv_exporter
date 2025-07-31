@@ -22,7 +22,18 @@ with open("sqlite_database.db", "rb") as f:
     db_bytes = f.read()
 socket.send(db_bytes)`
 
-<pre lang="python"><code>```python def hello(): print("Hello, world!") ```</code></pre>
+<pre lang="python"><code>
+import zmq
+    
+context = zmq.Context()
+socket = context.socket(zmq.REQ)
+socket.connect("tcp://127.0.0.1:5555")
+    
+with open("sqlite_database.db", "rb") as f:
+    db_bytes = f.read()
+    
+socket.send(db_bytes)
+</code></pre>
 
 
 ## How to programmatically RECEIVE data from the microservice
