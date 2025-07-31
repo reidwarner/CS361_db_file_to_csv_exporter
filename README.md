@@ -14,24 +14,20 @@ To request data from the microservice, use the following steps:
 4. Use `socket.send(binary_data)` to send the data to the microservice
 
 An example call using Python can be seen below:
-`import zmq
-context = zmq.Context()
-socket = context.socket(zmq.REQ)
-socket.connect("tcp://127.0.0.1:5555")
-with open("sqlite_database.db", "rb") as f:
-    db_bytes = f.read()
-socket.send(db_bytes)`
 
 <pre lang="python"><code>
 import zmq
-    
+
+# Create socket and connect to local host port 5555
 context = zmq.Context()
 socket = context.socket(zmq.REQ)
 socket.connect("tcp://127.0.0.1:5555")
-    
+
+# Given the file sqlite_database.db exists in the local directory, store the binary in db_bytes
 with open("sqlite_database.db", "rb") as f:
     db_bytes = f.read()
-    
+
+# Send binary data to the microservice
 socket.send(db_bytes)
 </code></pre>
 
