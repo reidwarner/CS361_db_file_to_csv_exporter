@@ -1,12 +1,10 @@
-# DB To CSV Exporter Microservice
-
-## Communication Contract
+# DB To CSV Exporter Microservice - Communication Contract
 
 This communication contract explain how to request data from the microservice, receive data from the microservice and a UML diagram showing how requesting and receiving data works.
 
 The microservice uses a Request/Resonse communication pattern with ZeroMQ as the protocol. This allows processes to communicate with the microservice over TCP. The microservice uses a socket connection that sends and receives on local host port 5555.
 
-### How to programmatically REQUEST data from the microservice
+## How to programmatically REQUEST data from the microservice
 The microservice receives request from the calling program in the form of binary SQLite database files by listening on the endpoint tcp://127.0.0.1:5555.
 
 To request data from the microservice, use the following steps:
@@ -16,7 +14,7 @@ To request data from the microservice, use the following steps:
 4. Use socket.send(binary_data) to send the data to the microservice
 
 
-### How to programmatically RECEIVE data from the microservice
+## How to programmatically RECEIVE data from the microservice
 The microservice will process the data and sends back a string that communicates if the CSV file creation was successful or not.
 
 To receive data from the microservice, use the following steps:
@@ -27,4 +25,4 @@ To receive data from the microservice, use the following steps:
   3. "Export Failure. Could not located Downloads folder."
 3. If the returned message string states the export was successful, then the generated csv file will be in the local Downloads directory.
 
-### UML sequence diagram 
+## UML sequence diagram 
