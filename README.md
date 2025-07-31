@@ -66,8 +66,10 @@ print(reply)
 If successful, the output of the above print statement will be:
 
 <pre><code>
-### Example Output 
+Example Output:
+    
     Export Successful. db_export_2025-07-31_15-32-45.csv available in Downloads folder.
+    
 </code></pre>
 
 ## UML sequence diagram 
