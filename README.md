@@ -73,3 +73,5 @@ Example Output:
 </code></pre>
 
 ## UML sequence diagram 
+
+![Sequence diagram](images/Screenshot 2025-07-31 at 8.04.01 PM.png)
